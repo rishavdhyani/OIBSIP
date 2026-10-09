@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Responsive temperature converter for Celsius, Fahrenheit, and Kelvin">
+<title>Tempora — Temperature Converter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<body>
+<header class="topbar"><a class="brand" href="#"><b>°</b> tempora<span>.</span></a><div class="top-label">TEMPERATURE TOOLS <i></i></div></header>
+<main class="shell">
+<section class="intro"><p class="eyebrow">A LITTLE CLARITY, IN EVERY DEGREE</p><h1>Temperature,<br><em>translated.</em></h1><p>Convert Celsius, Fahrenheit, and Kelvin in seconds. Simple, accurate, and ready whenever you need it.</p></section>
+<section class="card" aria-labelledby="title"><div class="card-head"><div><small>01 / INPUT</small><h2 id="title">Set your temperature</h2></div><div class="thermo" aria-hidden="true">♨</div></div>
+<form id="converter-form" novalidate><label for="temperature">Temperature value</label><input id="temperature" name="temperature" type="number" step="any" inputmode="decimal" placeholder="e.g. 25" aria-describedby="help error" required><p class="help" id="help">Use a number. Decimals and negative values are supported.</p>
+<label for="unit">Input unit</label><div class="select-wrap"><select id="unit" name="unit"><option value="C">Celsius (°C)</option><option value="F">Fahrenheit (°F)</option><option value="K">Kelvin (K)</option></select><span>⌄</span></div>
+<p class="error" id="error" role="alert" aria-live="polite"></p><button type="submit">Convert temperature <span>→</span></button></form>
+<div class="results" aria-live="polite" aria-atomic="true"><div class="results-head"><small>02 / RESULTS</small><span id="status"><i></i> READY TO CONVERT</span></div><p class="placeholder" id="placeholder">Your converted temperatures will appear here.</p>
+<div class="result-grid" id="result-grid" hidden><article><span>Celsius</span><strong id="result-c">—</strong><small>°C</small></article><article class="featured"><span>Fahrenheit</span><strong id="result-f">—</strong><small>°F</small></article><article><span>Kelvin</span><strong id="result-k">—</strong><small>K</small></article></div><p class="formula" id="formula" hidden>All three units are calculated from the same temperature.</p></div></section>
+<section class="guide"><div class="guide-title"><small>QUICK REFERENCE</small><h2>Three scales.<br>One easy tool.</h2></div><article><b class="blue">°C</b><div><h3>Celsius</h3><p>Common for everyday weather and science in many countries.</p></div></article><article><b class="orange">°F</b><div><h3>Fahrenheit</h3><p>Commonly used for weather and everyday temperatures in the US.</p></div></article><article><b class="green">K</b><div><h3>Kelvin</h3><p>An absolute temperature scale used in scientific work.</p></div></article></section>
+<p class="foot">Rishav DHYANI · Temperature Converter</p>
+</main></body></html>
